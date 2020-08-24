@@ -1,0 +1,11 @@
+El paper **_Collaborative filtering for implicit feedback datasets_**  propone un modelo *basado en contenido* de *factores latentes* que usa el *feedback implicito* del usuario para hacer recomendaciones de programas de TV.
+
+La forma en que los investigadores abordan la problemática es novedosa, ya que además de modelar la *preferecia* que tiene el usuario por un item, tambien se busca modelar la *confianza* que se tiene sobre esa preferencia, las cuales se definen en la seccion 4 del paper con las variables $p$  y $c$ respectivamente,   $p$ es una variable binaria que indica si el usuario ha consumido o no ese item y $c$ se calcula  $c = 1+\alpha*r$ donde $\alpha$ es una constante y $r$ es el valor entregado por el feedback implicito.
+
+Además de lo anterior, los investigadores filtraron los datos recolectados y no tomaron en cuenta las entradas del dataset donde el valor de $r$ sea menor a 0.5, es decir, para su modelo sólo consideraron los items donde el usuario vio al menos la mitad del programa y no consideraron la información que podría entregar el feedback negativo, lo cual no me parece beneficioso a la hora de hacer recomendaciones ya que, asumiendo que si el usuario no consumió el 100% del programa hay una alta probabilidad de que haya sido porque no le gustó, hacer distinción entre $r = 0$ y $r$ ~ $0$ es importante porque recomendar algo que no se ha visto es mejor que algo que se vio a medias.
+
+
+Por otro lado, en la seccion de experimentos se muestra que el modelo propuesto tiene un mejor desempeño que las bases propuestas *Popularity* y *Neighborhood* y que el desempeño mejora a medida que crece el numero de *factores*, de hecho, los autores recomiendan que se use la mayor cantidad de *factores* posibles dentro de los limites de poder de computo que se posea, pero es esto siempre asi?, sería interesante analizar si en algún momento el numero de *factores* utilizados impacta negativamente en el rendimiento 
+
+En conclusión, el modelo propuesto entrega una forma distinta de abordar el problema de recomendación a través de feedback implícito y da buenos resultados en comparación al resto de algoritmos presentados en el paper, pero tiene potencial de seguir mejorando, sobre todo si se considera el feedback negativo y el impacto del numero de *factors* en el modelo.
+

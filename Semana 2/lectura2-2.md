@@ -1,0 +1,10 @@
+El paper __*BPR: Bayesian Personalized Ranking from Implicit Feedback*__ propone un  método genérico llamado **_Bayesian Personalized Ranking (BPR)
+_** para lograr un sistema de recomendación de ranking personalizado para cada usuario en base a *feedback implicito*.
+
+Los investigadores proponen un nuevo criterio de optimización llamado **_BPR-Opt_** y el algoritmo **_LearnBPR_** para ser optimizado, los cuales buscan optimizar los párametros del modelo que llevan a predecir las *preferencias relativas del usuario para todos los pares de items* y **no** el *rating explícito* que le daría el usuario a cada item, lo que es un enfoque distinto y novedoso.
+
+Además de lo anterior, encuentro beneficioso para la comunidad que los investigadores hayan implementado su método para dos de los algoritmos más utilizados para aboradar el problema,  *matrix factorization* y *adaptive kNN*, lo cuál tras los sorprendentes resultados, facilita mucho su implementación y por tanto, su expansión y mejora significativa de los sistemas de recomendación en donde se utilizaran estas técnicas.
+
+En cuanto a los datasets utilizados, el caso de uso con el de *Netflix* no encuentro que sea totalmente ad-hoc ya que se vieron obligados a sacar del dataset las entradas donde los usuarios hayan dado feedback explícito, lo cual no es deseable o por lo menos, causa ruido la elección de ese dataset, quizas haya sido solo para probar como funcionaba en una plataforma concurrida.
+
+En coclusión, los investigadores proponen un método novedoso, cambiando el enfoque que se tenía sobre el problema de ranking personalizado y obteniendo resultados muy prometedores, y además que hayan implementado su método en los algoritmos más usados en la época para resolver el problema facilita que se mejoren significativamente los sistemas en donde se utilizaban. Considero que lograron una gran mejora en el área.
