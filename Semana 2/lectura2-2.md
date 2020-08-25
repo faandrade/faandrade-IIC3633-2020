@@ -1,5 +1,4 @@
-El paper __*BPR: Bayesian Personalized Ranking from Implicit Feedback*__ propone un  método genérico llamado **_Bayesian Personalized Ranking (BPR)
-_** para lograr un sistema de recomendación de ranking personalizado para cada usuario en base a *feedback implicito*.
+El paper __*BPR: Bayesian Personalized Ranking from Implicit Feedback*__ propone un  método genérico llamado **_Bayesian Personalized Ranking (BPR)_** para lograr un sistema de recomendación de ranking personalizado para cada usuario en base a *feedback implicito*.
 
 Los investigadores proponen un nuevo criterio de optimización llamado **_BPR-Opt_** y el algoritmo **_LearnBPR_** para ser optimizado, los cuales buscan optimizar los párametros del modelo que llevan a predecir las *preferencias relativas del usuario para todos los pares de items* y **no** el *rating explícito* que le daría el usuario a cada item, lo que es un enfoque distinto y novedoso.
 
